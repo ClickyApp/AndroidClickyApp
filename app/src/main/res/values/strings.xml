@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">ClickyApp</string>
+    <string name="fragment_sign_up_text_title">Sign Up</string>
+    <string name="fragment_sign_up_text_first_name">First Name</string>
+    <string name="fragment_sign_up_text_last_name">Last Name</string>
+    <string name="fragment_sign_up_text_email">School Email</string>
+    <string name="fragment_sign_up_text_password">Password</string>
+    <string name="fragment_sign_up_hint_email">YourEmail@nymc.edu</string>
+    <string name="fragment_sign_up_text_already_have_account">I already have an account</string>
+    <string name="fragment_sign_up_text_button_submit">Submit</string>
+
+    <string name="fragment_login_text_make_account">Make an Account</string>
+    <string name="fragment_login_text_forgot_password">Forgot Password</string>
+    <string name="fragment_login_text_button_submit">Submit</string>
+
+    <string name="course_text_title_placeholder">Course Title</string>
+    <string name="course_text_code_placeholder">Course Code</string>
+    <string name="course_text_instructor_name_placeholder">Instructor Name</string>
 </resources>
