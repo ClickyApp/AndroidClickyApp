@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_view_course_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/course_text_title_placeholder" />
+
+    <TextView
+        android:id="@+id/text_view_course_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/course_text_code_placeholder" />
+
+    <TextView
+        android:id="@+id/text_view_instructor_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/course_text_instructor_name_placeholder" />
+
+</LinearLayout>
