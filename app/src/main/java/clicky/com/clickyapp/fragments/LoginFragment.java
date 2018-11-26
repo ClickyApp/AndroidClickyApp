@@ -13,9 +13,8 @@ import android.widget.EditText;
 
 import java.io.Serializable;
 
-import clicky.com.clickyapp.R;
+import clicky.com.clickyapp.activities.R;
 import clicky.com.clickyapp.models.AuthUtil;
-import clicky.com.clickyapp.models.User;
 
 public class LoginFragment extends Fragment {
     private static final String LOG_TAG = LoginFragment.class.getSimpleName();

@@ -13,7 +13,13 @@
     <string name="fragment_login_text_forgot_password">Forgot Password</string>
     <string name="fragment_login_text_button_submit">Submit</string>
 
-    <string name="course_text_title_placeholder">Course Title</string>
-    <string name="course_text_code_placeholder">Course Code</string>
-    <string name="course_text_instructor_name_placeholder">Instructor Name</string>
+    <string name="course_text_title">Course Title</string>
+    <string name="course_text_code">Course Code</string>
+    <string name="course_text_instructor_name">Instructor Name</string>
+
+    <string name="text_add_course">Add Course</string>
+    <string name="text_create_course">Create Course</string>
+    <string name="text_course_title_hint">Foundations in Clinical Medicine</string>
+    <string name="text_course_code_hint">UMDM 1101</string>
+
 </resources>

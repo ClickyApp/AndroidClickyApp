@@ -8,6 +8,9 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.UserProfileChangeRequest;
 
+import java.io.Serializable;
+import java.util.UUID;
+
 public class User {
     private static User sInstance;
     private static final String LOG_TAG = User.class.getSimpleName();
@@ -21,6 +24,12 @@ public class User {
 
     private User() {
         mAuth = FirebaseAuth.getInstance();
+    }
+
+    public User(String firstName, String lastName, String email) {
+        mFirstName = firstName;
+        mLastName = lastName;
+        mEmail = email;
     }
 
     public static User get() {
@@ -79,5 +88,9 @@ public class User {
 
     public boolean isEmailVerified() {
         return mAuth.getCurrentUser().isEmailVerified();
+    }
+
+    public String getId() {
+        return mAuth.getCurrentUser().getUid();
     }
 }

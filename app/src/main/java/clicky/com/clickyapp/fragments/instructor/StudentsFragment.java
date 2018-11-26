@@ -15,7 +15,7 @@ public class StudentsFragment extends Fragment {
 
     private static final String ARGS_COURSE = "ARGS_COURSE";
 
-    public static Fragment newInstance(Course course){
+    public static Fragment newInstance(Course course) {
         Bundle args = new Bundle();
         Fragment fragment = new StudentsFragment();
         args.putSerializable(ARGS_COURSE, course);

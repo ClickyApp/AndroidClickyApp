@@ -13,11 +13,10 @@ import android.support.v7.app.AppCompatActivity;
 import java.util.Arrays;
 import java.util.List;
 
-import clicky.com.clickyapp.R;
-import clicky.com.clickyapp.fragments.instructor.ChatFragment;
-import clicky.com.clickyapp.fragments.instructor.CoursesFragment;
-import clicky.com.clickyapp.fragments.instructor.StudentsFragment;
+import clicky.com.clickyapp.activities.R;
+import clicky.com.clickyapp.fragments.instructor.InstructorChatFragment;
 import clicky.com.clickyapp.fragments.instructor.QuizzesFragment;
+import clicky.com.clickyapp.fragments.instructor.StudentsFragment;
 import clicky.com.clickyapp.models.Course;
 
 public class InstructorActivity extends AppCompatActivity {
@@ -40,13 +39,13 @@ public class InstructorActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        mCourse = (Course)getIntent().getSerializableExtra(EXTRA_COURSE);
+        mCourse = (Course) getIntent().getSerializableExtra(EXTRA_COURSE);
         initViews();
     }
 
-    private void initViews(){
+    private void initViews() {
         mViewPagerMyCourses = findViewById(R.id.view_pager_my_courses);
-        List<Fragment> fragments = Arrays.asList(StudentsFragment.newInstance(mCourse), ChatFragment.newInstance(mCourse), new QuizzesFragment());
+        List<Fragment> fragments = Arrays.asList(StudentsFragment.newInstance(mCourse), InstructorChatFragment.newInstance(mCourse), new QuizzesFragment());
         mViewPagerMyCourses.setAdapter(new MyCoursesPagerAdapter(getSupportFragmentManager(), fragments));
         mViewPagerMyCourses.setCurrentItem(1);
     }

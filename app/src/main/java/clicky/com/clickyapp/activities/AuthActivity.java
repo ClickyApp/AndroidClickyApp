@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.widget.Toast;
 
-import clicky.com.clickyapp.activities.instructor.CoursesActivity;
+import clicky.com.clickyapp.activities.instructor.InstructorCoursesActivity;
 import clicky.com.clickyapp.fragments.LoginFragment;
 import clicky.com.clickyapp.fragments.SignUpFragment;
 import clicky.com.clickyapp.models.AuthUtil;
@@ -15,13 +15,15 @@ public class AuthActivity extends SingleFragmentActivity implements AuthUtil.OnL
 
     @Override
     public Fragment createFragment() {
-
+        if(User.get().isLoggedIn()){
+            showCourses();
+        }
         return SignUpFragment.newInstance(this, this);
     }
 
     private void showCourses() {
         if (User.get().isTeacher()) {
-            Intent myCoursesIntent = CoursesActivity.newIntent(this);
+            Intent myCoursesIntent = InstructorCoursesActivity.newIntent(this);
             startActivity(myCoursesIntent);
             finish();
         } else {

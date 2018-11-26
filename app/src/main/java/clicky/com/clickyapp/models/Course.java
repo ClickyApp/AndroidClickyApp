@@ -11,10 +11,18 @@ public class Course implements Serializable {
     private Date mDateCreated;
     private String mCourseTitle;
     private String mCourseCode;
-    private String mCourseInstructor;
+    private transient User mCourseInstructor;
 
     public Course() {
         init();
+    }
+
+    public Course(UUID id, Date dateCreated, String courseTitle, String courseCode, User courseInstructor) {
+        mId = id;
+        mDateCreated = dateCreated;
+        mCourseTitle = courseTitle;
+        mCourseCode = courseCode;
+        mCourseInstructor = courseInstructor;
     }
 
     private void init() {
@@ -48,11 +56,11 @@ public class Course implements Serializable {
         mCourseCode = courseCode;
     }
 
-    public String getCourseInstructor() {
+    public User getCourseInstructor() {
         return mCourseInstructor;
     }
 
-    public void setCourseInstructor(String courseInstructor) {
+    public void setCourseInstructor(User courseInstructor) {
         mCourseInstructor = courseInstructor;
     }
 }

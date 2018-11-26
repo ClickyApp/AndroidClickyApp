@@ -12,7 +12,7 @@ import android.widget.EditText;
 
 import java.io.Serializable;
 
-import clicky.com.clickyapp.R;
+import clicky.com.clickyapp.activities.R;
 import clicky.com.clickyapp.models.AuthUtil;
 
 public class SignUpFragment extends Fragment {
@@ -32,11 +32,11 @@ public class SignUpFragment extends Fragment {
         Bundle args = new Bundle();
         Fragment fragment = new SignUpFragment();
 
-        if(onSignUpCompleteListener != null) {
+        if (onSignUpCompleteListener != null) {
             args.putSerializable(ARGS_ON_SIGN_UP_COMPLETE_LISTENER, onSignUpCompleteListener);
         }
 
-        if(onAlreadyHaveAccountListener != null) {
+        if (onAlreadyHaveAccountListener != null) {
             args.putSerializable(ARGS_ON_AlREADY_HAVE_ACCOUNT_COMPLETE_LISTENER, onAlreadyHaveAccountListener);
         }
 
@@ -60,13 +60,13 @@ public class SignUpFragment extends Fragment {
     public void onResume() {
         super.onResume();
         initViews();
-        AuthUtil.OnSignUpCompleteListener onSignUpCompleteListener = (AuthUtil.OnSignUpCompleteListener)getArguments().getSerializable(ARGS_ON_SIGN_UP_COMPLETE_LISTENER);
-        if(onSignUpCompleteListener != null) {
+        AuthUtil.OnSignUpCompleteListener onSignUpCompleteListener = (AuthUtil.OnSignUpCompleteListener) getArguments().getSerializable(ARGS_ON_SIGN_UP_COMPLETE_LISTENER);
+        if (onSignUpCompleteListener != null) {
             mOnSignUpCompleteListener = onSignUpCompleteListener;
         }
 
-        OnAlreadyHaveAccountListener onAlreadyHaveAccountListener = (OnAlreadyHaveAccountListener)getArguments().getSerializable(ARGS_ON_AlREADY_HAVE_ACCOUNT_COMPLETE_LISTENER);
-        if(onAlreadyHaveAccountListener != null) {
+        OnAlreadyHaveAccountListener onAlreadyHaveAccountListener = (OnAlreadyHaveAccountListener) getArguments().getSerializable(ARGS_ON_AlREADY_HAVE_ACCOUNT_COMPLETE_LISTENER);
+        if (onAlreadyHaveAccountListener != null) {
             mOnAlreadyHaveAccountListener = onAlreadyHaveAccountListener;
         }
     }
@@ -83,7 +83,7 @@ public class SignUpFragment extends Fragment {
         mButtonAlreadyHaveAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(mOnAlreadyHaveAccountListener != null) {
+                if (mOnAlreadyHaveAccountListener != null) {
                     mOnAlreadyHaveAccountListener.onAlreadyHaveAccount();
                 }
             }

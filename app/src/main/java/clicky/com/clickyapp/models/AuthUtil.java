@@ -1,6 +1,5 @@
 package clicky.com.clickyapp.models;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
@@ -32,10 +31,9 @@ public class AuthUtil {
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        if(onVerificationEmailSentListener != null) {
+                        if (onVerificationEmailSentListener != null) {
                             onVerificationEmailSentListener.onVerificationEmailSent(task.isSuccessful(), task.getException());
-                        }
-                        else {
+                        } else {
                             Log.e(LOG_TAG, "OnVerificationEmailSentListener null");
                         }
                     }
@@ -47,13 +45,12 @@ public class AuthUtil {
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
+                        if (task.isSuccessful()) {
                             User.get().setDisplayName(firstName, lastName);
                         }
-                        if(onSignUpCompleteListener != null) {
+                        if (onSignUpCompleteListener != null) {
                             onSignUpCompleteListener.onSignUpComplete(task.isSuccessful(), task.getException());
-                        }
-                        else {
+                        } else {
                             Log.e(LOG_TAG, "OnSignUpCompleteListener null");
                         }
                     }
@@ -65,10 +62,9 @@ public class AuthUtil {
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(onLoginCompleteListener!= null) {
+                        if (onLoginCompleteListener != null) {
                             onLoginCompleteListener.onLoginComplete(task.isSuccessful(), task.getException());
-                        }
-                        else {
+                        } else {
                             Log.e(LOG_TAG, "OnLoginCompleteListener null");
                         }
                     }
@@ -80,7 +76,7 @@ public class AuthUtil {
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        if(onPasswordResetListener != null) {
+                        if (onPasswordResetListener != null) {
                             onPasswordResetListener.onPasswordReset(task.isSuccessful(), task.getException());
                         }
                     }

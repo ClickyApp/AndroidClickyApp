@@ -17,7 +17,7 @@ public class ClickyPrefs {
     }
 
     public static ClickyPrefs get(Context context) {
-        if(sClickyPrefs == null) {
+        if (sClickyPrefs == null) {
             sClickyPrefs = new ClickyPrefs(context);
         }
         return sClickyPrefs;

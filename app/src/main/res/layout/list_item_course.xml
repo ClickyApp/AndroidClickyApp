@@ -8,18 +8,18 @@
         android:id="@+id/text_view_course_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/course_text_title_placeholder" />
+        android:text="@string/course_text_title" />
 
     <TextView
         android:id="@+id/text_view_course_code"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/course_text_code_placeholder" />
+        android:text="@string/course_text_code" />
 
     <TextView
         android:id="@+id/text_view_instructor_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/course_text_instructor_name_placeholder" />
+        android:text="@string/course_text_instructor_name" />
 
 </LinearLayout>
